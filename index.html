@@ -4,11 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claude Code 꿀팁 게시판</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>🗒️ Claude Code 꿀팁 게시판</h1>
+    <div class="header-badge">✦ MONIMO DEV</div>
+    <h1>Claude Code 꿀팁 게시판</h1>
     <p class="subtitle">모니모 개발팀의 Claude Code 노하우를 익명으로 공유해요</p>
   </header>
 
@@ -22,7 +26,7 @@
         <button class="filter-btn" data-tag="워크플로우">워크플로우</button>
         <button class="filter-btn" data-tag="기타">기타</button>
       </div>
-      <button class="add-btn" id="openModalBtn">✏️ 팁 올리기</button>
+      <button class="add-btn" id="openModalBtn">+ 팁 올리기</button>
     </div>
 
     <div class="board" id="board">
@@ -36,21 +40,27 @@
       <h2>새 팁 작성</h2>
       <p class="modal-notice">⚠️ 고객정보·API 키·내부 시스템 정보는 포함하지 마세요.</p>
       <form id="tipForm">
-        <label for="titleInput">제목 <span class="char-count" id="titleCount">0/20</span></label>
-        <input type="text" id="titleInput" maxlength="20" placeholder="핵심을 한 문장으로" required />
+        <div class="form-field">
+          <label for="titleInput">제목 <span class="char-count" id="titleCount">0/20</span></label>
+          <input type="text" id="titleInput" maxlength="20" placeholder="핵심을 한 문장으로" required />
+        </div>
 
-        <label for="bodyInput">내용 <span class="char-count" id="bodyCount">0/200</span></label>
-        <textarea id="bodyInput" maxlength="200" rows="4" placeholder="구체적인 방법이나 예시를 적어주세요" required></textarea>
+        <div class="form-field">
+          <label for="bodyInput">내용 <span class="char-count" id="bodyCount">0/200</span></label>
+          <textarea id="bodyInput" maxlength="200" rows="4" placeholder="구체적인 방법이나 예시를 적어주세요" required></textarea>
+        </div>
 
-        <label for="tagSelect">태그</label>
-        <select id="tagSelect" required>
-          <option value="">태그 선택</option>
-          <option value="프롬프트작성">프롬프트작성</option>
-          <option value="디버깅">디버깅</option>
-          <option value="코드리뷰">코드리뷰</option>
-          <option value="워크플로우">워크플로우</option>
-          <option value="기타">기타</option>
-        </select>
+        <div class="form-field">
+          <label for="tagSelect">태그</label>
+          <select id="tagSelect" required>
+            <option value="">태그 선택</option>
+            <option value="프롬프트작성">프롬프트작성</option>
+            <option value="디버깅">디버깅</option>
+            <option value="코드리뷰">코드리뷰</option>
+            <option value="워크플로우">워크플로우</option>
+            <option value="기타">기타</option>
+          </select>
+        </div>
 
         <div class="modal-actions">
           <button type="button" id="closeModalBtn">취소</button>
