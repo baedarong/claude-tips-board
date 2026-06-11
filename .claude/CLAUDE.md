@@ -30,7 +30,7 @@ Vercel 환경변수로 주입할 경우 `vercel.json`의 `env` 섹션에 추가.
 
 ```js
 // app.js 상단
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_ID/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzrq4sb_KjVgSFDoCt82BD8AbhcIHmVOV95Bz_Cv5Xpf1_YU7weaHNNvg04WJ7z3R0/exec';
 ```
 
 ## Google Sheets 구조
