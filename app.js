@@ -90,8 +90,10 @@ function attachLikeListeners() {
         });
         addLikedId(id);
         const tip = allTips.find(t => t.id === id);
-        if (tip) { tip.likes += 1; }
-        btn.textContent = `👍 ${(parseInt(btn.textContent.replace('👍', '')) || 0) + 1}`;
+        if (tip) {
+          tip.likes += 1;
+          btn.textContent = `👍 ${tip.likes}`;
+        }
       } catch {
         btn.disabled = false;
         btn.classList.remove('liked');
